@@ -1,0 +1,69 @@
+{
+  "author": "Branislav Hozza",
+  "version": "0.0.2",
+  "name": "sub-scaffold",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate:pnpm": "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm generate",
+    "generate:defs": "polkadot-types-from-defs --package meta-assets/types/interfaces --input ./types/interfaces --endpoint ./edgeware.json",
+    "generate:meta": "polkadot-types-from-chain --endpoint ./edgeware.json --output ./types/interfaces",
+    "generate:edgeware": "curl -H \"Content-Type: application/json\" -d '{\"id\":\"1\", \"jsonrpc\":\"2.0\", \"method\": \"state_getMetadata\", \"params\":[]}' $CHAIN_WS > edgeware.json",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test:unit": "vitest --config ./vitest.config.ts",
+    "fresh": "rm -rf ./node_modules && pnpm i && pnpm postinstall && pnpm dev"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "3.2.3",
+    "@nuxt/test-utils-edge": "^3.2.1-rc.0-27932342.5855c1e",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
+    "@types/big.js": "^6.1.6",
+    "@vicons/material": "^0.12.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "jsdom": "^21.1.0",
+    "nuxt": "3.2.3",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.4"
+  },
+  "dependencies": {
+    "@css-render/vue3-ssr": "^0.15.11",
+    "@kodadot1/sub-api": "^0.1.1-alpha.5",
+    "@paraspell/sdk": "^1.1.1",
+    "@pinia/nuxt": "^0.4.6",
+    "@polkadot/api": "^9.13.6",
+    "@polkadot/api-base": "^9.13.6",
+    "@polkadot/apps-config": "^0.124.1",
+    "@polkadot/extension-dapp": "^0.44.8",
+    "@polkadot/extension-inject": "^0.44.8",
+    "@polkadot/types": "^9.13.6",
+    "@polkadot/ui-keyring": "^2.11.1",
+    "@polkadot/vue-identicon": "^2.11.1",
+    "@vicons/ionicons5": "^0.12.0",
+    "big.js": "5.2.1",
+    "consola": "^2.15.3",
+    "naive-ui": "^2.34.3",
+    "ohmyfetch": "^0.4.21",
+    "pinia": "^2.0.30",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",
+    "solc": "^0.8.19",
+    "vue": ">=3.2.45 <4.0.0",
+    "vue-toastification": "2.0.0-rc.5",
+    "web3": "^1.9.0",
+    "webpack": "^5.75.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@nuxt/kit": "3.2.3"
+    }
+  }
+}
