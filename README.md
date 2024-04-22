@@ -9,10 +9,30 @@ This document serves as a guide for running our solution so that it can be conve
 - Node Package Executor at least 9.5.0
 
 ## Hardhat
-In folder nftaa_solidity, we will run command 'npm install' to install all requirements. After this, we can run 'npx hardhat test', which will execute our smart contract tests.
+In folder nftaa_solidity, we will run command 
+
+```bash
+npm install
+```
+
+to install all requirements. After this, we can run 
+
+```bash
+npx hardhat test
+```
+
+which will execute our smart contract tests.
 
 ## Web app
-To set up web application, we must go to folder nftaa_dapp and run command 'pnpm install' to install all app requirements. After this, we can run 'pnpm dev -o', which will launch our web application on port 3000 and open it in a new web browser window.
+To set up web application, we must go to folder nftaa_dapp and run command 
+```bash
+pnpm install
+```
+to install all app requirements. After this, we can run 
+```bash
+pnpm dev -o
+```
+which will launch our web application on port 3000 and open it in a new web browser window.
 
 # User guide
 
