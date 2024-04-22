@@ -1,4 +1,4 @@
-# Towards Proxy Staking Accounts Based on NFTs in Ethereum
+# Towards Proxy Staking Accounts Based on NFTs in Ethereum (a.k.a. NFT as an Account = NFTAA)
 
 If you want to use this code, please cite our article describing this solution:
 
